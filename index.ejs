@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Qr Code Generator</title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+    <body>
+        
+        <div class="d-grid gap-2 col-6 mx-auto centre">
+            <p>URL to QR Code</p>
+        <form action="/submit" method="post">
+            <input type="text" name="url" placeholder="Enter your URL">
+            <button  type="submit" id="button">Get QR Code</button>
+        </form>
+        <%if(qrImg){%>
+            <h1>Your QR Code</h1>
+                <img src="<%=qrImg %>"  />
+            
+        <%}%>
+            
+          </div>
+        
+    </body>
+    
+</html>
